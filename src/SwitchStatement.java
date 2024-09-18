@@ -32,5 +32,17 @@ public class SwitchStatement {
                 System.out.println("ini dari default lambda");
             }
         }
+
+//        Penggunaan Yeild pada switch statement di JAVA
+//        intinya yield itu kaya return, tapi mengembalikan nilai yang dihasilkan dari switch statement.
+
+        String deskripsiHasilAkhir = switch (nilaiAkhir){
+            case "A" : yield "Selamat kamu telah memenangkan pertandingan ini dengan gemilang";
+            case "B": yield "Selamat kamu telah menang dengan baik";
+            default: yield "Kamu salah memasukkan nilai";
+        };
+
+        System.out.print("Nilai dari deskripsi hasil akhir adalah == ");
+        System.out.print(deskripsiHasilAkhir);
     }
 }
